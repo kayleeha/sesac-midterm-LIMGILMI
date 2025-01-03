@@ -10,3 +10,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 800) {
+}
+
+@media (max-width: 540px) {
+}
+
+@media screen and (min-width: 540px) {
+}
+
+@media screen and (min-width: 540px) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .pc {
+    display: none;
+  }
+}

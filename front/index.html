@@ -3,7 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>본인 이름 작성</title>
+    <title>임길미</title>
+    <!-- axios CDN -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <form name="init-form">
+      <h1>todo list</h1>
+      <input type="text" placeholder="today's todo" name="search"/>
+      <button type="button" onclick="addTodo()">작성</button>
+
+       <%for(let i=0; i<data.length; i++){%>
+        <div id="tr_<%=data[i].id %>">
+        <input type="checkbox" name="check"/>
+        <p name="content"><%=data[i].content %> </p>
+        <button type="button" name="btn" onclick="deleteTodo(this, '<%=data[i].id %>')">
+          X
+        </button>
+      </div>
+      <%}%>
+
+      <div class="add"></div>
+    </form>
+  </body>
 </html>
+
+
